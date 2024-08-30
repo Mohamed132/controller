@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif; /* Sci-Fi font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0d1b2a; /* Dark bluish background */
+            margin: 0;
+            flex-direction: column;
+            color: #00aaff; /* Bluish neon text color */
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #00aaff; /* Bluish color */
+            text-shadow: 0 0 5px #0077cc; /* Subtle glow */
+        }
+
+        .registration-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #1b263b; /* Darker background for container */
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.4); /* Subtle bluish glow around the container */
+        }
+
+        .registration-container h1 {
+            margin-bottom: 20px;
+            color: #00aaff;
+            text-shadow: 0 0 5px #0077cc; /* Subtle glow */
+        }
+
+        .registration-container input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #00aaff;
+            width: 250px;
+            background-color: #1b263b; /* Dark background for input */
+            color: #ffffff; /* White text */
+            text-shadow: 0 0 5px #0077cc; /* Subtle glow on text */
+        }
+
+        .registration-container input[type="text"]::placeholder {
+            color: #0077cc; /* Lighter bluish placeholder text */
+        }
+
+        .registration-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color: #00aaff;
+            color: #0d1b2a; /* Darker text color for contrast */
+            cursor: pointer;
+            box-shadow: 0 0 10px #0077cc; /* Subtle bluish glow */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .registration-container button:hover {
+            background-color: #0077cc;
+            color: #f0f0f0; /* Light text color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">Game Name</div>
+
+    <div class="registration-container">
+        <h1>Register</h1>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="register()">Submit</button>
+    </div>
+
+    <script>
+        function register() {
+            const name = document.getElementById('nameInput').
